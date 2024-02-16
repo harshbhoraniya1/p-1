@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="">Item1</label>
+        <input type="text" id="preice1">
+    </div>
+    <div>
+        <label for="">Item2</label>
+        <input type="text" id="preice2">
+    </div>
+
+    <div id="total"></div>
+    <div id="dis"></div>
+    <button onclick="display()">Result</button>
+
+    <script>
+        // let pr1,pr2,pr3 = 0
+
+        function display()
+        {
+            pr1 = +(document.getElementById("preice1").value);
+            pr2 = +(document.getElementById("preice2").value);
+
+            document.getElementById("total").innerText = pr1 + pr2 ;
+
+            pr3 = +(document.getElementById("total").innerText);
+
+            if (pr3<20000)
+            {
+                document.getElementById("dis").innerText = pr3*0.05;
+            }
+            else
+            {
+                document.getElementById("dis").innerText = pr3*0.10;
+
+            }
+        }
+
+    </script>
+</body>
+</html>

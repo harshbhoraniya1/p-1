@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <div id="demo"></div>
+    <img src="" alt="" id="img">
+    <div id="img1"></div>
+    <div id="number"></div> -->
+
+    <!-- <script>
+        var firstName = "harsh";
+        var image = "p-1.jpg";
+        var url = "123";
+        var num = 123 
+
+        document.getElementById("demo").innerText = firstName;
+        document.getElementById("img").src = image;
+        document.getElementById("img1").innerText = typeof url;
+        document.getElementById("number").innerText = typeof num;
+    </script> -->
+
+
+    <input type="text" id="number1">
+    <input type="text" id="number2">
+    <div id="display1"></div>
+    <!-- <div id="display2"></div>
+    <div id="display3"></div>
+    <div id="display4"></div> -->
+    <button onclick="display()">+</button>
+    <button onclick="display2()">-</button>
+    <button onclick="display3()">*</button>
+    <button onclick="display4()">/</button>
+
+    <script>
+
+        function display()
+        {
+            const num1 = +(document.getElementById("number1").value);
+            const num2 = +(document.getElementById("number2").value);
+
+            document.getElementById("display1").innerText = num1 + num2 ;
+            
+            // document.getElementById("display3").innerText = num1 * num2 ;
+            // document.getElementById("display4").innerText = num1 / num2 ;
+        }
+
+        function display2()
+        {
+            const num1 = +(document.getElementById("number1").value);
+            const num2 = +(document.getElementById("number2").value);
+
+            document.getElementById("display1").innerText = num1 - num2 ;
+        }
+
+        function display3()
+        {
+            const num1 = +(document.getElementById("number1").value);
+            const num2 = +(document.getElementById("number2").value);
+
+            document.getElementById("display1").innerText = num1 * num2 ;
+        }
+
+        function display4()
+        {
+            const num1 = +(document.getElementById("number1").value);
+            const num2 = +(document.getElementById("number2").value);
+
+            document.getElementById("display1").innerText = num1 / num2 ;
+        }
+    </script>
+</body>
+</html>

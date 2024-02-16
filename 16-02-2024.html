@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="val1">
+    
+    <div id="val">0</div>
+
+
+
+    <button onclick="plus()">+</button>
+    <button onclick="mai()">-</button>
+
+    <script>
+        let val = 0 ;
+        let val1 = 0 ;
+
+        function plus()
+        {
+            val = +(document.getElementById("val").innerText);
+            val1 = +(document.getElementById("val1").value);
+
+            if(val1>0)
+            {
+                document.getElementById("val").innerText = val + val1 ;
+            }
+            else
+            {
+                document.getElementById("val").innerText = ++val ;
+            }
+        }
+
+        function mai()
+        {
+            val = +(document.getElementById("val").innerText);
+            val1 = +(document.getElementById("val1").value);
+
+            if(val1>0)
+            {
+                document.getElementById("val").innerText = val - val1 ;
+            }
+            else
+            {
+                document.getElementById("val").innerText = --val ;
+            }
+        }
+    </script>
+</body>
+</html>
