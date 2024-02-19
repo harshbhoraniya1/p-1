@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="input1">
+    <input type="text" id="input2">
+    <input type="text" id="input3">
+    <button onclick="sam()"> result
+    </button> -->
+
+    <!-- <input type="text" id="input1">
+    <input type="text" id="input2">
+    <input type="text" id="input3">
+    <input type="text" id="input4">
+    <button onclick="max()">result</button> -->
+
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <input type="text" id="input3">
+    <input type="text" id="input4">
+    <button onclick="max()">result</button>
+
+    <script>
+
+        // function sam()
+        // {
+        //     let inputs = document.getElementsByTagName("input");
+        //     let sum = 0;
+
+        //     console.log(inputs);
+        //     for(let i = 0; i<inputs.length; i++)
+        //     {
+        //         console.log(i);
+        //         sum = sum + +(inputs[i].value);
+        //     }
+        //     console.log(sum);
+        // }
+
+        // function max()
+        // {
+        //     let inputs = document.getElementsByTagName("input");
+        //     let max = inputs[0].value;
+
+        //     for(let i=0;i<inputs.length;i++)
+        //     {
+        //         if(inputs[i].value>max)
+        //         {
+        //             max=inputs[i].value
+        //         }
+        //     }
+        //     console.log(max);
+        // }
+
+        function max()
+        {
+            let inputs = document.getElementsByTagName("input");
+            let even = inputs[0].value;
+            
+            for(let i=0;i<inputs.length;i++)
+            {
+                if(inputs[i].value % 2 == 0)
+                {
+                    console.log(inputs[i].value)
+                }
+            }
+            // console.log(max);
+        }
+    </script>
+</body>
+</html>
