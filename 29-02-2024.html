@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp1">
+    <button onclick="search()">Search</button>
+    <div id="dis"></div>
+    <script>
+
+        // let a = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        
+        // function search(){
+        // let inp = document.getElementById("inp1").value;
+        // let abc = new RegExp( inp , "i");
+        // let sec = a.search(abc);
+
+        // document.getElementById("dis").innerText = sec;
+    // }
+
+    let mystring = ["vadodara", "morbi", "surat", "ahemdabad", "vapi"];
+
+    function abc(){
+        for(let i = 0;i<mystring.length;i++){
+
+            document.getElementById("dis").innerHTML += `<div>${mystring[i]}</div>`
+        }
+    }
+    abc();
+
+    function search(){
+        let inp = document.getElementById("inp1").value;
+        let regex = new RegExp( inp , "i");
+        document.getElementById("dis").innerHTML = "";
+        
+        for(let i = 0;i<mystring.length;i++){
+        let index = mystring[i].search(regex)
+            if(index >= 0){
+                document.getElementById("dis").innerHTML += `<div>${mystring[i].slice(0,index)}<span style="color:red">${mystring[i].substr(index,inp.length)}</span>${mystring[i].slice(inp.length)}</div>`
+            }
+        }
+
+
+    }
+
+    </script>
+</body>
+</html>
