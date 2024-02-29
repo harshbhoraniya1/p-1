@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dollar to INR</h1>
+
+    <input type="text" id="doll" placeholder="Enter Dollar Amount">
+
+    <button onclick="display()">Convort</button>
+    <button onclick="display1()">OTP</button>
+
+    <div id="display"></div>
+
+    <script>
+       function display(){
+        let a = +(document.getElementById("doll").value);
+        let b = 82.89
+
+        let c = a*b;
+
+        console.log(c.toFixed(2));
+
+       }
+       function display1()
+       {
+        let d = Math.random()*1000000;
+        let e = -1.6645667889;
+
+        // n use for decler bigint
+        let f = 99999999999999999n;
+
+        // toPrecision(6) = display only 6 number include after point and beffor point
+        console.log(d.toPrecision(6))
+        //Math.trunc(e) = Remove all Number After Point
+        console.log(Math.trunc(e));
+        //Math.round(e) = round of value ex. 5.55 = 6 and 5.45 = 5
+        console.log(Math.round(e));
+        //Math.ceil(e) = ex. 5.4444 = 6
+        console.log(Math.ceil(e));
+        //Math.floor(e) = ex. 5.4444 = 5
+        console.log(Math.floor(e));
+        //e.toFixed(2) = ex. 5.4444 = 5.44
+        console.log(e.toFixed(2));
+        //Math.abs(e) = ex. - 5.4444 = 5.4444
+        console.log(Math.abs(e));
+
+       }
+    </script>
+</body>
+</html>
