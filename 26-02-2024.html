@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="dis" onclick="display()"></div>
+
+    <script>
+        let a = "This is the JavaScript.This is the JavaScript.This is the JavaScript.This is the JavaScript.This is the JavaScript.This is the JavaScript.This is the JavaScript.This is the JavaScript.This is the JavaScript.This is the JavaScript.This is the JavaScript.This is the JavaScript.This is the JavaScript.This is the JavaScript.This is the JavaScript.This is the JavaScript."
+
+        let readmore = true;
+
+        function display() {
+            if (readmore) {
+                document.getElementById("dis").innerHTML = a.slice(0, 21).concat("...read more");
+            }
+            else {
+                document.getElementById("dis").innerHTML = a.concat("...read less");
+            }
+            readmore = !readmore;
+        }
+        display();
+    </script>
+</body>
+
+</html>
