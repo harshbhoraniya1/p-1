@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [11,22,44,33,66,55,99,77,88]
+        arr.sort(function(a,b){
+            // return a-b;
+            if(a < b){
+                return -1
+            }
+        })
+        console.log(arr);
+    </script>
+    <!-- <script>
+        let array = ["vadodara","goa","morbi","surat"]
+
+        array.sort(function(a,b){
+            return a.length-b.length
+        })
+        console.log(array);
+    </script> -->
+
+    <script>
+        let arry = [
+            {cityid:1,
+            city:"morbi"},
+            {cityid : 2,
+            city : "vadodara"},
+            {cityid : 2,
+            city:"goa"}, 
+            {cityid : 4,
+            city : "surat"}
+        ]
+
+        arry.sort(function(a,b){
+            if(b.cityid > a.cityid){
+                return -1;
+            }
+            else if(b.cityid == a.cityid){
+                if(b.city > a.city){
+                    return -1;
+                }
+                else{
+                    return 1;
+                }
+            }
+            else
+            {
+                return 1;
+            }
+        })
+        console.log(arry);
+    </script>
+    
+</body>
+</html>
